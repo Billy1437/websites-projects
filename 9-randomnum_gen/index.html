@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+    }
+
+    #myButton {
+        font-size: 3em;
+        padding: 10px 25px;
+    }
+</style>
+
+<body>
+
+    <button id="myButton">roll</button>
+    <label for="" id="myLabel"></label>
+
+</body>
+<script>
+    const myButton = document.getElementById("myButton");
+    const myLabel = document.getElementById("myLabel");
+    const min = 20;
+    const max = 50;
+    myButton.onclick = () => {
+        randomNumber = Math.floor(Math.random() * (max - min)) + min;
+        myLabel.textContent = randomNumber;
+
+    }
+</script>
+
+</html>
